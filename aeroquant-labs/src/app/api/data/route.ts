@@ -23,21 +23,21 @@ const Aboutdata: aboutdata[] = [
     heading: 'About us.',
     imgSrc: '/images/aboutus/imgOne.svg',
     paragraph:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem',
+      'We are a team of young software developers who build tools and products that help solve problems in society.',
     link: 'Learn more',
   },
   {
     heading: 'Services.',
     imgSrc: '/images/aboutus/imgTwo.svg',
     paragraph:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem',
+      'From web apps to internal tools, we design and ship software that is useful, accessible, and built to last.',
     link: 'Learn more',
   },
   {
     heading: 'Our Works.',
     imgSrc: '/images/aboutus/imgThree.svg',
     paragraph:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem',
+      'We take ideas from problem to production — researching, designing, building, and iterating alongside the people who use what we make.',
     link: 'Learn more',
   },
 ]

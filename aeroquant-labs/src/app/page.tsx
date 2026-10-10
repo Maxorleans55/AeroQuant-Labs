@@ -13,11 +13,6 @@ import Testimonial from '@/app/components/Home/Testimonials'
 import Articles from '@/app/components/Home/Articles'
 import Join from '@/app/components/Home/Joinus'
 import Insta from '@/app/components/Home/Insta'
-import { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: 'Desgy Solutions',
-}
 
 export default function Home() {
   return (
