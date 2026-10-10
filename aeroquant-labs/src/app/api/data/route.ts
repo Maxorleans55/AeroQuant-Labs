@@ -56,7 +56,7 @@ const WorkData: workdata[] = [
   },
   {
     profession: 'Co-founder',
-    name: 'Elorm Kwame Loh',
+    name: 'Elorm Kuami Loh',
     imgSrc: '/images/wework/avatar4.svg',
   },
 ]
