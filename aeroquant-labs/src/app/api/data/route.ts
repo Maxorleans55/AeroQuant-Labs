@@ -52,6 +52,7 @@ const WorkData: workdata[] = [
   {
     profession: 'Co-founder',
     name: 'Bright Otsiwa Agyei',
+    imgSrc: '/images/wework/bright.jpg',
   },
   {
     profession: 'Co-founder',
