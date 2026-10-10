@@ -89,13 +89,25 @@ const Work = () => {
               <div key={i}>
                 <div className='bg-white dark:bg-darkHeroBg m-3 py-14 my-10 text-center shadow-xl rounded-3xl'>
                   <div className='relative'>
-                    <Image
-                      src={items.imgSrc}
-                      alt={items.name}
-                      width={182}
-                      height={182}
-                      className='inline-block m-auto rounded-[50%_0_50%_50%]'
-                    />
+                    {items.imgSrc ? (
+                      <Image
+                        src={items.imgSrc}
+                        alt={items.name}
+                        width={182}
+                        height={182}
+                        className='inline-block m-auto rounded-[50%_0_50%_50%]'
+                      />
+                    ) : (
+                      <div
+                        aria-hidden='true'
+                        className='m-auto w-[182px] h-[182px] rounded-[50%_0_50%_50%] bg-primary/10 text-primary text-5xl font-semibold flex items-center justify-center select-none'>
+                        {items.name
+                          .split(' ')
+                          .map((word) => word[0])
+                          .join('')
+                          .slice(0, 2)}
+                      </div>
+                    )}
                     <div className='absolute right-16 bottom-0 bg-white shadow-linckedin p-5 rounded-full'>
                       <Image
                         src={'/images/wework/linkedin.svg'}

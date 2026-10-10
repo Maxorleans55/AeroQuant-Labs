@@ -52,12 +52,10 @@ const WorkData: workdata[] = [
   {
     profession: 'Co-founder',
     name: 'Bright Otsiwa Agyei',
-    imgSrc: '/images/wework/avatar3.svg',
   },
   {
     profession: 'Co-founder',
     name: 'Elorm Kuami Loh',
-    imgSrc: '/images/wework/avatar4.svg',
   },
 ]
 
