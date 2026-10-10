@@ -100,7 +100,7 @@ const Work = () => {
                     ) : (
                       <div
                         aria-hidden='true'
-                        className='m-auto w-[182px] h-[182px] rounded-[50%_0_50%_50%] bg-primary/10 text-primary text-5xl font-semibold flex items-center justify-center select-none'>
+                        className='m-auto w-[182px] h-[182px] rounded-[50%_0_50%_50%] bg-[linear-gradient(180deg,#eef3fb_0%,#dce7f9_100%)] text-primary text-5xl font-semibold flex items-center justify-center select-none'>
                         {items.name
                           .split(' ')
                           .map((word) => word[0])
