@@ -20,8 +20,9 @@ const Beliefs = () => {
               </span>
             </h3>
             <p className='text-lg text-white/75 pt-2 mb-16 text-center sm:text-start'>
-              Quis ipsum suspendisse ultrices gravida risus commodo viverra
-              maecenas accumsan lacus vel facilisis.
+              We say what we will do, then we do it. Honest timelines, honest
+              estimates, and code we are happy to explain — even when the
+              answer is “that is not worth building.”
             </p>
             <div className='text-center sm:text-start'>
               <Link
@@ -43,8 +44,9 @@ const Beliefs = () => {
                 you have.
               </h3>
               <p className='pt-2 mb-16 text-center sm:text-start text-black/75 text-lg'>
-                Quis ipsum suspendisse ultrices gravida risus commodo viverra
-                maecenas accumsan lacus vel facilisis.
+                Bring us the idea and we will help you shape it — prototyping,
+                building, and iterating until it is something people can
+                actually use.
               </p>
               <div className='text-center sm:text-start'>
                 <Link

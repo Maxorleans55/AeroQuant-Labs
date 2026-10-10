@@ -15,7 +15,8 @@ const Digital = () => {
                 Who we are
               </p>
               <h2 className='text-white mb-8 leading-tight text-center lg:text-start lg:w-full'>
-                We are a digital agency that builds amazing products.
+                We are AeroQuant Labs — a software team that builds products
+                people rely on.
               </h2>
               <div className='text-center lg:text-start'>
                 <Link

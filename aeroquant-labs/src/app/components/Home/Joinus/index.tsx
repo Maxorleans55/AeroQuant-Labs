@@ -12,9 +12,9 @@ const Join = () => {
           </p>
           <h2 className='my-6'>Take your business to the new level.</h2>
           <p className='text-black/50 text-base font-normal max-w-3xl mx-auto'>
-            Craven omni memoria patriae zombieland clairvius narcisse religionis
-            sunt diri undead historiarum. Golums, zombies unrelenting et Raimi
-            fascinati beheading.
+            Tell us what you are working on — a product idea, a process that
+            needs automating, or a problem worth solving. We will get back to
+            you within two business days.
           </p>
         </div>
 
