@@ -91,10 +91,10 @@ const Work = () => {
                   <div className='relative'>
                     <Image
                       src={items.imgSrc}
-                      alt='gaby'
+                      alt={items.name}
                       width={182}
                       height={182}
-                      className='inline-block m-auto'
+                      className='inline-block m-auto rounded-[50%_0_50%_50%]'
                     />
                     <div className='absolute right-16 bottom-0 bg-white shadow-linckedin p-5 rounded-full'>
                       <Image

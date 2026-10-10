@@ -47,7 +47,7 @@ const WorkData: workdata[] = [
   {
     profession: 'Co-founder',
     name: 'Maxwell Otsiwa Agyakwa',
-    imgSrc: '/images/wework/avatar.svg',
+    imgSrc: '/images/wework/maxwell.jpg',
   },
   {
     profession: 'Co-founder',
