@@ -25,7 +25,7 @@ const FAQ = () => {
                   <div>
                     <DisclosureButton className='flex w-full justify-between items-center text-left text-2xl font-medium focus:outline-hidden hover:cursor-pointer'>
                       <span className='text-black'>
-                        Can you design my site?
+                        What kind of work do you take on?
                       </span>
                       <div
                         className={`h-5 w-5 transform transition-transform duration-300 ${
@@ -36,10 +36,10 @@ const FAQ = () => {
                     </DisclosureButton>
                     <DisclosurePanel className='text-base text-black/50 font-normal text-left pt-4 mt-6 border-t border-border'>
                       <div className='lg:max-w-70%'>
-                        Craven omni memoria patriae zombieland clairvius
-                        narcisse religionis sunt diri undead historiarum.
-                        Golums, zombies unrelenting et Raimi fascinati
-                        beheading.
+                        Web and mobile applications, internal tools, APIs and
+                        dashboards. If it solves a real problem for your users
+                        or your team, it is in scope — and if it does not, we
+                        will tell you.
                       </div>
                     </DisclosurePanel>
                   </div>
@@ -51,7 +51,9 @@ const FAQ = () => {
                 {({ open }) => (
                   <>
                     <DisclosureButton className='flex w-full justify-between items-center rounded-lg text-left text-2xl font-medium focus:outline-hidden hover:cursor-pointer'>
-                      <span className='text-black'>Can you code my site?</span>
+                      <span className='text-black'>
+                        How does a project start?
+                      </span>
                       <div
                         className={`h-5 w-5 transform transition-transform duration-300 ${
                           open ? 'rotate-180' : ''
@@ -61,10 +63,10 @@ const FAQ = () => {
                     </DisclosureButton>
                     <DisclosurePanel className='text-base text-black/50 pt-4 mt-6 text-left border-t border-border'>
                       <div className='lg:max-w-70%'>
-                        Craven omni memoria patriae zombieland clairvius
-                        narcisse religionis sunt diri undead historiarum.
-                        Golums, zombies unrelenting et Raimi fascinati
-                        beheading.
+                        Send us a message with what you are trying to solve. We
+                        reply with a short discovery call, a clear scope, and a
+                        timeline — then we design, build, and ship in weekly
+                        increments you can see as they happen.
                       </div>
                     </DisclosurePanel>
                   </>
@@ -87,10 +89,10 @@ const FAQ = () => {
                     </DisclosureButton>
                     <DisclosurePanel className='text-base text-black/50 pt-4 mt-6 font-normal text-left border-t border-border'>
                       <div className='lg:max-w-70%'>
-                        Craven omni memoria patriae zombieland clairvius
-                        narcisse religionis sunt diri undead historiarum.
-                        Golums, zombies unrelenting et Raimi fascinati
-                        beheading.
+                        We are based in Accra, Ghana, and work with clients
+                        remotely around the world. Most of our collaboration
+                        happens over video calls, shared boards, and weekly
+                        demos.
                       </div>
                     </DisclosurePanel>
                   </>

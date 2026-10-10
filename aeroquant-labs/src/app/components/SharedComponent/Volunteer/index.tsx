@@ -9,7 +9,10 @@ const Volunteer = () => {
                         Become a Volunteer
                     </h2>
                     <p className="text-16 text-white lg:max-w-60% mx-auto mb-6">
-                        Lorem ipsum dolor sit amet, consectetur adipiscelit. Nam malesu dolor sit amet, consectetur adipiscelit. consectetur adipiscelit. Nam malesu dolor.
+                        We are always open to developers, designers and
+                        collaborators who want to build tools that solve real
+                        problems. Bring your skills and we will find something
+                        worth shipping together.
                     </p>
                     <div className="flex justify-center ">
                         <Link href="#" className="text-white bg-linear-to-r from-error to-warning px-7 py-5 hover:from-transparent hover:to-transparent border border-transparent hover:border-error hover:text-error rounded-sm">
