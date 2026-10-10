@@ -87,8 +87,7 @@ export const Introduction = () => {
         </div>
         <div className="mt-5">
           <p className="text-base font-medium text-muted/60">
-            Desgy Tailwind NextJs Template is built with Tailwindcss and
-            Nextjs.
+            AeroQuant Labs is built with Next.js, React, and Tailwind CSS.
           </p>
           <p className="text-base font-medium text-muted/60">
             These theme is ready to use and you can totally customize as per
