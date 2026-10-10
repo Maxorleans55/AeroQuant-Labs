@@ -46,32 +46,17 @@ const Aboutdata: aboutdata[] = [
 const WorkData: workdata[] = [
   {
     profession: 'Co-founder',
-    name: 'John Doe',
+    name: 'Maxwell Otsiwa Agyakwa',
     imgSrc: '/images/wework/avatar.svg',
   },
   {
     profession: 'Co-founder',
-    name: 'John Doe',
+    name: 'Bright Otsiwa Agyei',
     imgSrc: '/images/wework/avatar3.svg',
   },
   {
     profession: 'Co-founder',
-    name: 'John Doe',
-    imgSrc: '/images/wework/avatar4.svg',
-  },
-  {
-    profession: 'Co-founder',
-    name: 'John Doe',
-    imgSrc: '/images/wework/avatar.svg',
-  },
-  {
-    profession: 'Co-founder',
-    name: 'John Doe',
-    imgSrc: '/images/wework/avatar3.svg',
-  },
-  {
-    profession: 'Co-founder',
-    name: 'John Doe',
+    name: 'Elorm Kwame Loh',
     imgSrc: '/images/wework/avatar4.svg',
   },
 ]
