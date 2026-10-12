@@ -17,11 +17,11 @@ const Dedicated = () => {
           {/* Left Column */}
           <div className='col-span-12 lg:col-span-6 justify-self-center'>
             <Image
-              src='/images/dedicated/man.svg'
-              alt='man-icon'
+              src='/images/dedicated/maxwell.jpg'
+              alt='Maxwell Otsiwa Agyakwa, Co-founder of AeroQuant Labs'
               width={416}
               height={530}
-              className='mx-auto md:mx-0'
+              className='mx-auto md:mx-0 rounded-[30px]'
             />
           </div>
 
