@@ -8,13 +8,14 @@ import { testimonials } from '@/app/types/testimonials'
 import { articles } from '@/app/types/articles'
 import { footerlinks } from '@/app/types/footerlinks'
 import { engagement } from '@/app/types/engagement'
+import { contactmethod } from '@/app/types/contact'
 
 // header nav-links data
 const headerData: HeaderItem[] = [
-  { label: 'About Us', href: '#About' },
-  { label: 'Team', href: '#Team' },
-  { label: 'FAQ', href: '#FAQ' },
-  { label: 'Blog', href: '#Blog' },
+  { label: 'About Us', href: '/#About' },
+  { label: 'Team', href: '/#Team' },
+  { label: 'FAQ', href: '/#FAQ' },
+  { label: 'Blog', href: '/#Blog' },
 ]
 
 // about data
@@ -229,10 +230,11 @@ const FooterLinksData: footerlinks[] = [
   {
     section: 'Menu',
     links: [
-      { label: 'About Us', href: '#About' },
-      { label: 'Team', href: '#Team' },
-      { label: 'FAQ', href: '#FAQ' },
-      { label: 'Blog', href: '#Blog' },
+      { label: 'About Us', href: '/#About' },
+      { label: 'Team', href: '/#Team' },
+      { label: 'FAQ', href: '/#FAQ' },
+      { label: 'Blog', href: '/#Blog' },
+      { label: 'Contact', href: '/contact' },
     ],
   },
   {
@@ -260,6 +262,54 @@ const FooterLinksData: footerlinks[] = [
   },
 ]
 
+// contact page data
+const ContactMethodsData: contactmethod[] = [
+  {
+    title: 'Email Us',
+    detail: 'hello@aeroquantlabs.com',
+    href: 'mailto:hello@aeroquantlabs.com',
+  },
+  {
+    title: 'Our Location',
+    detail: 'Accra, Ghana — remote-first, meetings by appointment.',
+  },
+  {
+    title: 'Response Time',
+    detail: 'We reply to every message within two business days.',
+  },
+  {
+    title: 'More To Come',
+    detail: 'As AeroQuant Labs grows, so will our presence.',
+  },
+]
+
+const InquiryTypes = [
+  'Project idea',
+  'Partnership',
+  'Join the team',
+  'Other',
+]
+
+const HeardAboutOptions = [
+  'Search Engine',
+  'Social Media',
+  'Event',
+  'Referral',
+  'Other',
+]
+
+const CountryOptions = [
+  'Ghana',
+  'Nigeria',
+  'Kenya',
+  'South Africa',
+  'United Kingdom',
+  'United States',
+  'Germany',
+  'Canada',
+  'Other',
+]
+
 export const GET = () => {
   return NextResponse.json({
     headerData,
@@ -270,5 +320,9 @@ export const GET = () => {
     TestimonialsData,
     ArticlesData,
     FooterLinksData,
+    ContactMethodsData,
+    InquiryTypes,
+    HeardAboutOptions,
+    CountryOptions,
   })
 }

@@ -83,7 +83,7 @@ const Header: React.FC = () => {
               sticky ? 'py-3' : 'py-7'
             }`}>
             <Link
-              href='#contact'
+              href='/contact'
               className='hidden lg:block bg-primary text-white hover:bg-blue-700 px-4 py-2 rounded-lg hover:cursor-pointer'>
               Contact
             </Link>
@@ -124,7 +124,7 @@ const Header: React.FC = () => {
             )}
             <div className='mt-4 flex flex-col space-y-4 w-full'>
               <Link
-                href='#contact'
+                href='/contact'
                 className='bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700'
                 onClick={() => setNavbarOpen(false)}>
                 Contact
