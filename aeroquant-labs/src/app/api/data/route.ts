@@ -15,7 +15,6 @@ const headerData: HeaderItem[] = [
   { label: 'Team', href: '#Team' },
   { label: 'FAQ', href: '#FAQ' },
   { label: 'Blog', href: '#Blog' },
-  { label: 'Docs', href: '/documentation' },
 ]
 
 // about data
@@ -242,7 +241,6 @@ const FooterLinksData: footerlinks[] = [
       { label: 'Design', href: '/' },
       { label: 'Mockup', href: '/' },
       { label: 'View all', href: '/' },
-      { label: 'Log In', href: '/' },
     ],
   },
   {
