@@ -266,8 +266,8 @@ const FooterLinksData: footerlinks[] = [
 const ContactMethodsData: contactmethod[] = [
   {
     title: 'Email Us',
-    detail: 'hello@aeroquantlabs.com',
-    href: 'mailto:hello@aeroquantlabs.com',
+    detail: 'AeroQuantLabs55@gmail.com',
+    href: 'mailto:AeroQuantLabs55@gmail.com',
   },
   {
     title: 'Our Location',
