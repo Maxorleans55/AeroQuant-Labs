@@ -25,7 +25,7 @@ const footer = () => {
   }, [])
 
   return (
-    <div className='bg-black' id='first-section'>
+    <div className='bg-black' id='contact'>
       <div className='container mx-auto max-w-2xl pt-48 pb-16 px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
         <div className='grid grid-cols-1 gap-y-10 gap-x-16 sm:grid-cols-2 lg:grid-cols-12 xl:gap-x-8'>
           {/* COLUMN-1 */}
