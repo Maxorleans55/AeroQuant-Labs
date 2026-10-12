@@ -7,6 +7,7 @@ import { featureddata } from '@/app/types/featureddata'
 import { testimonials } from '@/app/types/testimonials'
 import { articles } from '@/app/types/articles'
 import { footerlinks } from '@/app/types/footerlinks'
+import { engagement } from '@/app/types/engagement'
 
 // header nav-links data
 const headerData: HeaderItem[] = [
@@ -80,52 +81,43 @@ const FeaturedData: featureddata[] = [
   },
 ]
 
-// plans data
-const PlansData = [
+// engagement data — how clients work with AeroQuant Labs
+const EngagementData: engagement[] = [
   {
-    heading: 'Startup',
-    price: {
-      monthly: 19,
-      yearly: 190,
-    },
-    user: 'per user',
-    features: {
-      profiles: '5 Social Profiles',
-      posts: '5 Scheduled Posts Per Profile',
-      templates: '400+ Templated',
-      view: 'Calendar View',
-      support: '24/7 Support',
-    },
+    heading: 'Discovery Sprint',
+    duration: '1–2 weeks',
+    label: 'fixed price',
+    features: [
+      'Workshop to pin down the problem',
+      'User flows and key screens',
+      'Technical approach and estimate',
+      'You keep the deliverables',
+      'Credited toward the build',
+    ],
   },
   {
-    heading: 'Business',
-    price: {
-      monthly: 29,
-      yearly: 290,
-    },
-    user: 'per user',
-    features: {
-      profiles: '10 Social Profiles',
-      posts: '5 Scheduled Posts Per Profile',
-      templates: '600+ Templated',
-      view: 'Calendar View',
-      support: '24/7 VIP Support',
-    },
+    heading: 'Product Build',
+    duration: '4–12 weeks',
+    label: 'fixed scope',
+    features: [
+      'Design and engineering in one team',
+      'Weekly demos, no black box',
+      'Tested, documented code',
+      'Launch and handover support',
+      'Source code is yours',
+    ],
   },
   {
-    heading: 'Agency',
-    price: {
-      monthly: 59,
-      yearly: 590,
-    },
-    user: 'per user',
-    features: {
-      profiles: '100 Social Profiles',
-      posts: '100 Scheduled Posts Per Profile',
-      templates: '800+ Templated',
-      view: 'Calendar View',
-      support: '24/7 VIP Support',
-    },
+    heading: 'Ongoing Partner',
+    duration: 'monthly',
+    label: 'rolling',
+    features: [
+      'A team that already knows your product',
+      'Continuous improvements and fixes',
+      'Monitoring and maintenance',
+      'Priority response times',
+      'Scale up or down monthly',
+    ],
   },
 ]
 
@@ -276,7 +268,7 @@ export const GET = () => {
     Aboutdata,
     WorkData,
     FeaturedData,
-    PlansData,
+    EngagementData,
     TestimonialsData,
     ArticlesData,
     FooterLinksData,
