@@ -50,7 +50,7 @@ const Contact = () => {
       '',
       String(form.get('message')),
     ].join('\n')
-    window.location.href = `mailto:hello@aeroquantlabs.com?subject=${encodeURIComponent(
+    window.location.href = `mailto:AeroQuantLabs55@gmail.com?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`
     setSent(true)
@@ -263,8 +263,8 @@ const Contact = () => {
               <p className='text-sm text-green-600'>
                 Your email app should be opening with your message ready to
                 send. If nothing happened, email us directly at{' '}
-                <a href='mailto:hello@aeroquantlabs.com' className='underline'>
-                  hello@aeroquantlabs.com
+                <a href='mailto:AeroQuantLabs55@gmail.com' className='underline'>
+                  AeroQuantLabs55@gmail.com
                 </a>
                 .
               </p>
