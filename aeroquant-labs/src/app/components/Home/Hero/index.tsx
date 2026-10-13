@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import Image from 'next/image'
+import MaterializeImage from '@/app/components/Common/MaterializeImage'
 import { motion } from 'framer-motion'
 import { Icon } from '@iconify/react/dist/iconify.js'
 
@@ -37,11 +37,11 @@ const Hero = () => {
             </Link>
           </div>
           <div className='xl:col-span-7 lg:col-span-6 lg:block hidden'>
-            <Image
+            <MaterializeImage
               src='/images/hero/banner-image.png'
-              alt='banner image'
-              width={600}
-              height={600}
+              alt='Illustration of a developer working at a desk'
+              width={792}
+              height={690}
               className='w-full'
             />
           </div>
