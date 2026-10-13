@@ -176,3 +176,24 @@ html {
     animation: none;
   }
 }
+
+/* Why-work cards: subtle rise + settle on scroll-in (AOS handles the trigger).
+   Scoped override so the entrance also carries a small scale, not just a slide. */
+@media (prefers-reduced-motion: no-preference) {
+  #why-section [data-aos='fade-up'] {
+    transform: translate3d(0, 60px, 0) scale(0.96);
+  }
+  #why-section [data-aos='fade-up'].aos-animate {
+    transform: none;
+  }
+}
+
+/* Reduced motion: show the cards immediately with no entrance animation. */
+@media (prefers-reduced-motion: reduce) {
+  #why-section [data-aos='fade-up'],
+  #why-section [data-aos='fade-up'].aos-animate {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
