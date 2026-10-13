@@ -4,11 +4,11 @@ import { HeaderItem } from '@/app/types/menu'
 import { aboutdata } from '@/app/types/aboutdata'
 import { workdata } from '@/app/types/workdata'
 import { featureddata } from '@/app/types/featureddata'
-import { testimonials } from '@/app/types/testimonials'
 import { articles } from '@/app/types/articles'
 import { footerlinks } from '@/app/types/footerlinks'
 import { engagement } from '@/app/types/engagement'
 import { contactmethod } from '@/app/types/contact'
+import { whywork } from '@/app/types/whywork'
 
 // header nav-links data
 const headerData: HeaderItem[] = [
@@ -121,55 +121,31 @@ const EngagementData: engagement[] = [
   },
 ]
 
-// testimonial data
-const TestimonialsData: testimonials[] = [
+// why work with us — honest differentiators, no invented customers
+const WhyWorkData: whywork[] = [
   {
-    name: 'Robert Fox',
-    profession: 'Operations Lead, Parkview Int.Ltd',
-    comment:
-      'They took a vague idea and shipped a working product in weeks. Communication was clear at every step, and nothing was oversold.',
-    imgSrc: '/images/testimonial/user1.svg',
-    rating: 5,
+    icon: 'tabler:users-group',
+    title: 'Founders do the work',
+    description:
+      'You deal with the people actually building your product — not a sales layer handing you off to someone you never met.',
   },
   {
-    name: 'Leslie Alexander',
-    profession: 'Founder, Parkview Int.Ltd',
-    comment:
-      'The tool they built replaced three spreadsheets and a lot of manual work for our team. It just works, every day.',
-    imgSrc: '/images/testimonial/user2.svg',
-    rating: 5,
+    icon: 'tabler:rocket',
+    title: 'We ship, fast',
+    description:
+      'Small scope, working software, quick iterations. You see real progress in days, not a slide deck in six weeks.',
   },
   {
-    name: 'Cody Fisher',
-    profession: 'Product Manager, Parkview Int.Ltd',
-    comment:
-      'Fast, honest, and genuinely invested in the outcome. They pushed back when something was a bad idea — exactly what you want in a partner.',
-    imgSrc: '/images/testimonial/user3.svg',
-    rating: 4,
+    icon: 'tabler:lock-open',
+    title: 'No lock-in',
+    description:
+      'Clean, documented code that is yours from day one. Hire us or hire someone else — the work walks with you.',
   },
   {
-    name: 'Robert Fox',
-    profession: 'Operations Lead, Parkview Int.Ltd',
-    comment:
-      'We needed something our users could run on cheap phones and slow connections. They understood that constraint from day one.',
-    imgSrc: '/images/testimonial/user1.svg',
-    rating: 5,
-  },
-  {
-    name: 'Leslie Alexander',
-    profession: 'Founder, Parkview Int.Ltd',
-    comment:
-      'From the first call to launch, we always knew what was being built, what it cost, and what was next.',
-    imgSrc: '/images/testimonial/user2.svg',
-    rating: 4,
-  },
-  {
-    name: 'Cody Fisher',
-    profession: 'Product Manager, Parkview Int.Ltd',
-    comment:
-      'They designed, built, and handed over documentation our team could actually pick up. No lock-in, no mystery code.',
-    imgSrc: '/images/testimonial/user3.svg',
-    rating: 5,
+    icon: 'tabler:device-mobile',
+    title: 'Built for real conditions',
+    description:
+      'Cheap phones, slow networks, low data. We design for the connection your users actually have, not the one we wish they had.',
   },
 ]
 
@@ -317,7 +293,7 @@ export const GET = () => {
     WorkData,
     FeaturedData,
     EngagementData,
-    TestimonialsData,
+    WhyWorkData,
     ArticlesData,
     FooterLinksData,
     ContactMethodsData,
