@@ -48,7 +48,7 @@ const Aboutdata: aboutdata[] = [
 // work-data
 const WorkData: workdata[] = [
   {
-    profession: 'Co-founder',
+    profession: 'Frontend Developer & Digital Forensics',
     name: 'Maxwell Otsiwa Agyakwa',
     imgSrc: '/images/wework/maxwell.jpg',
   },
@@ -58,8 +58,18 @@ const WorkData: workdata[] = [
     imgSrc: '/images/wework/bright.jpg',
   },
   {
-    profession: 'Co-founder',
+    profession: 'Frontend Developer',
     name: 'Elorm Kuami Loh',
+    linkedin: 'https://www.linkedin.com/in/elormloh',
+  },
+  {
+    profession: 'Co-founder',
+    name: 'Solomon Agyabeng Jr',
+    imgSrc: '/images/wework/solomon.jpg',
+  },
+  {
+    profession: 'UI/UX Designer & Backend Developer',
+    name: 'Benedicta Stoff Boadi',
   },
 ]
 
