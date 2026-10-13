@@ -44,18 +44,32 @@ const WhyWork = () => {
 
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16'>
           {reasons.map((reason, i) => (
+            // Outer element carries the AOS scroll-in entrance; the inner
+            // element owns hover motion (AOS sets `transform: none` on the
+            // animated node, which would otherwise beat Tailwind hover lifts).
             <div
               key={reason.title}
-              className='bg-white rounded-3xl p-8 shadow-testimonial flex flex-col'
+              className='h-full'
               data-aos='fade-up'
-              data-aos-delay={String(i * 100)}>
-              <div className='w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-6'>
-                <Icon icon={reason.icon} className='text-primary text-2xl' />
+              data-aos-delay={String(i * 120)}>
+              <div className='group relative flex h-full flex-col overflow-hidden rounded-3xl border border-black/[0.06] bg-white p-8 shadow-testimonial transition-all duration-300 ease-out hover:-translate-y-2 hover:border-primary/25 hover:shadow-[0_24px_50px_-20px_rgba(0,102,255,0.35)]'>
+                {/* soft brand glow revealed on hover */}
+                <span
+                  aria-hidden='true'
+                  className='pointer-events-none absolute -right-24 -top-24 h-48 w-48 rounded-full bg-gradient-to-br from-[#2b93ff] to-[#0066ff] opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-[0.18]'
+                />
+                <div className='relative'>
+                  <div className='mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#2b93ff] to-[#0066ff] text-white shadow-[0_10px_24px_-8px_rgba(0,102,255,0.6)] transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110'>
+                    <Icon icon={reason.icon} className='text-[26px]' />
+                  </div>
+                  <h5 className='mb-3 transition-colors duration-300 group-hover:text-primary'>
+                    {reason.title}
+                  </h5>
+                  <p className='text-base leading-relaxed text-black/50'>
+                    {reason.description}
+                  </p>
+                </div>
               </div>
-              <h5 className='mb-3'>{reason.title}</h5>
-              <p className='text-black/50 text-base leading-relaxed'>
-                {reason.description}
-              </p>
             </div>
           ))}
         </div>
