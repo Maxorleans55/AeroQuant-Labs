@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import MaterializeImage from '@/app/components/Common/MaterializeImage'
+import AssembleImage from '@/app/components/Common/AssembleImage'
 import { motion } from 'framer-motion'
 import { Icon } from '@iconify/react/dist/iconify.js'
 
@@ -37,7 +37,7 @@ const Hero = () => {
             </Link>
           </div>
           <div className='xl:col-span-7 lg:col-span-6 lg:block hidden'>
-            <MaterializeImage
+            <AssembleImage
               src='/images/hero/banner-image.png'
               alt='Illustration of a developer working at a desk'
               width={792}
