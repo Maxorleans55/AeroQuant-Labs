@@ -147,7 +147,7 @@ const Contact = () => {
         <div className='container mx-auto max-w-7xl px-4'>
           <h2 data-aos='fade-up'>See what we do.</h2>
           <p className='text-white/50 mt-6 max-w-2xl' data-aos='fade-up'>
-            A ten-second tour of the work we love doing.
+            Reach out to us.
           </p>
           <div className='mt-14' data-aos='fade-up'>
             <CommercialVideo

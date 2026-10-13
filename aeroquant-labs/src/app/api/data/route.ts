@@ -63,7 +63,7 @@ const WorkData: workdata[] = [
     linkedin: 'https://www.linkedin.com/in/elormloh',
   },
   {
-    profession: 'Co-founder',
+    profession: 'Frontend Developer',
     name: 'Solomon Agyabeng Jr',
     imgSrc: '/images/wework/solomon.jpg',
   },
