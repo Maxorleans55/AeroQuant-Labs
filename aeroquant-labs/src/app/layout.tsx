@@ -1,11 +1,20 @@
 import { Manrope } from 'next/font/google'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import Header from '@/app/components/Layout/Header'
 import Footer from '@/app/components/Layout/Footer'
 import ScrollToTop from '@/app/components/ScrollToTop'
 import Aoscompo from '@/utils/aos'
 const font = Manrope({ subsets: ['latin'] })
+
+// Strict, explicit viewport: device width at scale 1. This matches the
+// Next.js default but pins it deliberately — no mobile zoom heuristics,
+// which together with `touch-action: manipulation` (globals.css) keeps
+// taps instant on every device.
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://aeroquant-labs.vercel.app'),
