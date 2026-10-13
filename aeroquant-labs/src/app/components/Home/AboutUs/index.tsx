@@ -34,7 +34,7 @@ const Aboutus = () => {
           <Image
             src='/images/aboutus/dots.svg'
             width={100}
-            height={100}
+            height={80}
             alt='dots-image'
             className='absolute bottom-1 -left-20'
           />
@@ -65,7 +65,7 @@ const Aboutus = () => {
                       {item.paragraph}
                     </p>
                     <Link
-                      href='#'
+                      href={item.href}
                       className='text-18 font-semibold text-primary hover-underline flex items-center'>
                       {item.link}
                       <Icon

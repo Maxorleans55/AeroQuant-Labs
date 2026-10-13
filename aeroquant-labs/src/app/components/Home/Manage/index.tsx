@@ -48,7 +48,7 @@ const Manage = () => {
                   src='/images/manage/right.svg'
                   alt='check-icon'
                   width={21}
-                  height={14}
+                  height={16}
                 />
                 <p className='text-lg font-semibold'>{item}</p>
               </div>

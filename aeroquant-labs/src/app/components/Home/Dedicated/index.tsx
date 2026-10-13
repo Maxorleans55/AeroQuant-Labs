@@ -9,7 +9,7 @@ const Dedicated = () => {
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-5'>
           <Image
             src='/images/dedicated/spiral.svg'
-            height={272}
+            height={347}
             width={686}
             alt='spiral-design'
             className='absolute left-0 top-0 hidden lg:block -z-10'
@@ -36,7 +36,7 @@ const Dedicated = () => {
                 src='/images/dedicated/comma.svg'
                 alt='comma-image'
                 width={200}
-                height={106}
+                height={130}
                 className='absolute -top-16 -left-32 hidden lg:block'
                 data-aos='zoom-in'
                 data-aos-delay='400'

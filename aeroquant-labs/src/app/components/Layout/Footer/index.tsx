@@ -40,7 +40,7 @@ const footer = () => {
                     src={'/images/footer/vec.svg'}
                     alt='facebook'
                     width={15}
-                    height={20}
+                    height={27}
                   />
                 </Link>
               </div>
@@ -50,7 +50,7 @@ const footer = () => {
                     src={'/images/footer/twitter.svg'}
                     alt='twitter'
                     width={25}
-                    height={20}
+                    height={22}
                   />
                 </Link>
               </div>
@@ -60,7 +60,7 @@ const footer = () => {
                     src={'/images/footer/instagram.svg'}
                     alt='instagram'
                     width={25}
-                    height={20}
+                    height={25}
                   />
                 </Link>
               </div>
@@ -97,12 +97,12 @@ const footer = () => {
               </p>
             </div>
             <div className='flex justify-center md:justify-end'>
-              <Link href='/'>
+              <Link href='/privacy'>
                 <p className='text-base text-white pr-6 hover:text-white/60 hover:underline'>
                   Privacy policy
                 </p>
               </Link>
-              <Link href='/'>
+              <Link href='/terms'>
                 <p className='text-base text-white pl-6 border-solid border-l border-footer hover:text-white/60 hover:underline'>
                   Terms & conditions
                 </p>
