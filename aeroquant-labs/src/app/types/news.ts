@@ -7,4 +7,5 @@ export type newsitem = {
   comments: number
   author: string
   createdAt: string
+  image: string | null
 }

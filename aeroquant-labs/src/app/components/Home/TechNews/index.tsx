@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 import React, { useEffect, useState } from 'react'
 import { Icon } from '@iconify/react/dist/iconify.js'
@@ -78,37 +79,61 @@ const TechNews = () => {
                   href={item.url}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='group relative flex h-full flex-col overflow-hidden rounded-3xl border border-black/[0.06] bg-white p-6 shadow-testimonial transition-all duration-300 ease-out hover:-translate-y-2 hover:border-primary/25 hover:shadow-[0_24px_50px_-20px_rgba(0,102,255,0.35)]'>
-                  <span className='absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#2b93ff] to-[#0047c2]' />
-                  <div className='flex items-center justify-between gap-2 mb-4'>
-                    <span className='inline-flex max-w-[75%] items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary'>
-                      <Icon icon='tabler:world' className='shrink-0 text-sm' />
-                      <span className='truncate'>{item.source}</span>
-                    </span>
-                    <Icon
-                      icon='tabler:external-link'
-                      className='shrink-0 text-black/25 transition-colors duration-300 group-hover:text-primary'
-                    />
-                  </div>
-                  <h5 className='mb-4 flex-1 font-bold leading-snug transition-colors duration-300 group-hover:text-primary'>
-                    {item.title}
-                  </h5>
-                  <div className='flex items-center gap-4 border-t border-black/5 pt-4 text-sm text-black/50'>
-                    <span className='inline-flex items-center gap-1.5'>
-                      <Icon
-                        icon='tabler:arrow-big-up'
-                        className='text-base text-primary'
+                  className='group relative flex h-full flex-col overflow-hidden rounded-3xl border border-black/[0.06] bg-white shadow-testimonial transition-all duration-300 ease-out hover:-translate-y-2 hover:border-primary/25 hover:shadow-[0_24px_50px_-20px_rgba(0,102,255,0.35)]'>
+                  {item.image ? (
+                    <div className='relative h-40 w-full overflow-hidden'>
+                      <img
+                        src={item.image}
+                        alt=''
+                        loading='lazy'
+                        referrerPolicy='no-referrer'
+                        className='h-full w-full object-cover transition-transform duration-500 group-hover:scale-105'
+                        onError={(e) => {
+                          // If the preview image is unavailable, drop the whole
+                          // image block so the card falls back to text-only.
+                          const wrapper = e.currentTarget.parentElement
+                          if (wrapper) wrapper.style.display = 'none'
+                        }}
                       />
-                      {item.points}
-                    </span>
-                    <span className='inline-flex items-center gap-1.5'>
-                      <Icon icon='tabler:message' className='text-base' />
-                      {item.comments}
-                    </span>
-                    <span className='ml-auto inline-flex items-center gap-1.5'>
-                      <Icon icon='tabler:clock' className='text-base' />
-                      {timeAgo(item.createdAt)}
-                    </span>
+                      <span className='absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#2b93ff] to-[#0047c2]' />
+                    </div>
+                  ) : (
+                    <span className='absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#2b93ff] to-[#0047c2]' />
+                  )}
+                  <div className='flex flex-1 flex-col p-6'>
+                    <div className='flex items-center justify-between gap-2 mb-4'>
+                      <span className='inline-flex max-w-[75%] items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary'>
+                        <Icon
+                          icon='tabler:world'
+                          className='shrink-0 text-sm'
+                        />
+                        <span className='truncate'>{item.source}</span>
+                      </span>
+                      <Icon
+                        icon='tabler:external-link'
+                        className='shrink-0 text-black/25 transition-colors duration-300 group-hover:text-primary'
+                      />
+                    </div>
+                    <h5 className='mb-4 flex-1 font-bold leading-snug transition-colors duration-300 group-hover:text-primary'>
+                      {item.title}
+                    </h5>
+                    <div className='flex items-center gap-4 border-t border-black/5 pt-4 text-sm text-black/50'>
+                      <span className='inline-flex items-center gap-1.5'>
+                        <Icon
+                          icon='tabler:arrow-big-up'
+                          className='text-base text-primary'
+                        />
+                        {item.points}
+                      </span>
+                      <span className='inline-flex items-center gap-1.5'>
+                        <Icon icon='tabler:message' className='text-base' />
+                        {item.comments}
+                      </span>
+                      <span className='ml-auto inline-flex items-center gap-1.5'>
+                        <Icon icon='tabler:clock' className='text-base' />
+                        {timeAgo(item.createdAt)}
+                      </span>
+                    </div>
                   </div>
                 </a>
               </div>
