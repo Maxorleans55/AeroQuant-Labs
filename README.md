@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="aeroquant-labs/public/images/logo/aeroquant-labs.jpg" alt="AeroQuant Labs logo" width="120" />
+<img src="aeroquant-labs/public/images/logo/logo-animated.svg" alt="AeroQuant Labs logo" width="130" />
 
 # AeroQuant Labs
 
@@ -32,12 +32,6 @@ for people and organisations solving real problems.
 This repository holds the **company website** — a single-page product tour
 with a dedicated contact page, built to introduce the team and make it easy
 to start a conversation.
-
-<a href="aeroquant-labs/public/videos/aeroquant-commercial.mp4">
-  <img src="aeroquant-labs/public/videos/poster.jpg" alt="The AeroQuant Labs commercial — click to watch" width="560" />
-</a>
-
-<p align="center"><em>Our 10-second commercial — click the frame to watch it.</em></p>
 
 ## ✨ What's on the site
 
