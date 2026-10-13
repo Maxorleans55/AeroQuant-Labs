@@ -17,7 +17,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://aeroquant-labs.vercel.app'),
+  metadataBase: new URL('https://aero-quant-labs.vercel.app'),
   title: {
     default: 'AeroQuant Labs — Software Development Team',
     template: '%s | AeroQuant Labs',
