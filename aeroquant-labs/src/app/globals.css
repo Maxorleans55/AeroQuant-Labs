@@ -136,6 +136,8 @@ html {
 
 .logo-mark {
   animation: logo-drop-in 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  /* Compositor hint: keeps the drop-in on its own layer. */
+  will-change: transform, opacity;
 }
 
 .logo-orbit-ring {
@@ -162,6 +164,8 @@ html {
   opacity: 0;
   transition: opacity 0.3s ease;
   animation: logo-orbit 1.8s linear infinite;
+  /* Compositor hint: the ring rotates forever; keep it off the main thread. */
+  will-change: transform;
   pointer-events: none;
 }
 
@@ -196,4 +200,54 @@ html {
     transform: none !important;
     transition: none !important;
   }
+}
+
+/* ── Interaction performance layer ──────────────────────────────
+   Behavior-only polish: timing curves, compositor hints, and
+   touch physics. No visual values (colors, spacing, layout,
+   theme) are changed anywhere. */
+
+/* 1) Hardware-friendly transitions on interactive elements.
+      transform/opacity composite on the GPU; color/shadow keep
+      existing hover and focus states fluid instead of snapping.
+      Element selectors rank below Tailwind utilities, so every
+      explicit `transition*` class in the markup keeps winning
+      with its own timing. */
+a,
+button,
+[role='button'],
+input,
+select,
+textarea,
+label,
+summary {
+  transition-property: transform, opacity, color, background-color,
+    border-color, box-shadow;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 2) Touch responsiveness: removes the legacy 300ms double-tap-to-zoom
+      delay on anything interactive (the viewport meta already sets
+      width=device-width; touch-action completes the story on iOS). */
+a,
+button,
+[role='button'],
+input,
+select,
+textarea,
+label,
+summary {
+  touch-action: manipulation;
+}
+
+/* 3) Momentum scrolling: native inertial physics on iOS Safari for the
+      page scroll and every scrollable container class Tailwind ships. */
+html,
+body,
+.overflow-auto,
+.overflow-y-auto,
+.overflow-x-auto,
+.overflow-scroll {
+  -webkit-overflow-scrolling: touch;
 }

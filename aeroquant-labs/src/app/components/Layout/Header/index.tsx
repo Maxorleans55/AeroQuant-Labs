@@ -27,7 +27,8 @@ const Header: React.FC = () => {
   }
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
+    // Passive: never block the browser's scroll compositor while listening.
+    window.addEventListener('scroll', handleScroll, { passive: true })
     document.addEventListener('mousedown', handleClickOutside)
     return () => {
       window.removeEventListener('scroll', handleScroll)
@@ -102,7 +103,7 @@ const Header: React.FC = () => {
         )}
         <div
           ref={mobileMenuRef}
-          className={`lg:hidden fixed top-0 right-0 h-full w-full bg-darkmode shadow-lg transform transition-transform duration-300 max-w-xs ${
+          className={`lg:hidden fixed top-0 right-0 h-full w-full bg-darkmode shadow-lg transform transition-transform duration-300 max-w-xs will-change-transform ${
             navbarOpen ? 'translate-x-0' : 'translate-x-full'
           } z-50`}>
           <div className='flex items-center justify-between p-4'>

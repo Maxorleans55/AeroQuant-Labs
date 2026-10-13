@@ -23,7 +23,8 @@ export default function ScrollToTop() {
       }
     }
 
-    window.addEventListener('scroll', toggleVisibility)
+    // Passive: lets the browser keep scrolling smoothly while we listen.
+    window.addEventListener('scroll', toggleVisibility, { passive: true })
 
     return () => window.removeEventListener('scroll', toggleVisibility)
   }, [])
