@@ -83,17 +83,41 @@ Open [http://localhost:3000](http://localhost:3000).
 | `npm run build` | Production build |
 | `npm run start` | Serve the production build |
 | `npm run lint` | Run ESLint |
+| `npm test` | Run the Playwright E2E suite |
+| `npm run test:report` | Open the HTML report from the last run |
+
+## 🧪 Testing
+
+End-to-end tests drive the real site in Chromium — forms, links, videos,
+animations and APIs are exercised exactly as a visitor would use them:
+
+```bash
+npm test            # runs the suite (reuses a dev server on :3000, or starts one)
+npm run test:report # open the HTML report from the last run
+```
+
+The suite covers the contact and Join us forms (validation → mailto
+handoff → confirmation), nav anchors, the FAQ accordion, the one-shot hero
+assembly (paints, then must go static), both commercial videos, the live
+news feed, privacy/terms pages, the branded 404, API payloads (including
+the curated footer), and a clean console/network pass. GitHub Actions runs
+the same suite on every push and pull request to `main`
+(`.github/workflows/e2e.yml`).
 
 ## 📁 Project Structure
 
 ```
 AeroQuant-Labs/
+├── .github/workflows/       # CI — Playwright E2E on every push/PR
 ├── aeroquant-labs/           # The Next.js application
 │   ├── public/               # Static assets — logo, images, commercial video
+│   ├── tests/e2e/            # Playwright end-to-end tests
 │   └── src/
 │       ├── app/
 │       │   ├── page.tsx      # Home — the single-page product tour
 │       │   ├── contact/      # Contact page
+│       │   ├── privacy/      # Privacy policy page
+│       │   ├── terms/        # Terms & conditions page
 │       │   ├── api/          # Route handlers (all site content)
 │       │   ├── components/   # React components
 │       │   └── types/        # TypeScript types
