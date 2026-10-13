@@ -25,6 +25,7 @@ const Aboutdata: aboutdata[] = [
     paragraph:
       'We are a team of young software developers who build tools and products that help solve problems in society.',
     link: 'Learn more',
+    href: '/#Team',
   },
   {
     heading: 'Services.',
@@ -32,6 +33,7 @@ const Aboutdata: aboutdata[] = [
     paragraph:
       'From web apps to internal tools, we design and ship software that is useful, accessible, and built to last.',
     link: 'Learn more',
+    href: '/#services-section',
   },
   {
     heading: 'Our Works.',
@@ -39,6 +41,7 @@ const Aboutdata: aboutdata[] = [
     paragraph:
       'We take ideas from problem to production — researching, designing, building, and iterating alongside the people who use what we make.',
     link: 'Learn more',
+    href: '/#Featured',
   },
 ]
 
@@ -161,26 +164,10 @@ const FooterLinksData: footerlinks[] = [
     ],
   },
   {
-    section: 'Category',
+    section: 'Legal',
     links: [
-      { label: 'Design', href: '/' },
-      { label: 'Mockup', href: '/' },
-      { label: 'View all', href: '/' },
-    ],
-  },
-  {
-    section: 'Pages',
-    links: [
-      { label: '404', href: '/' },
-      { label: 'Instructions', href: '/' },
-      { label: 'License', href: '/' },
-    ],
-  },
-  {
-    section: 'Others',
-    links: [
-      { label: 'Styleguide', href: '/' },
-      { label: 'Changelog', href: '/' },
+      { label: 'Privacy policy', href: '/privacy' },
+      { label: 'Terms & conditions', href: '/terms' },
     ],
   },
 ]

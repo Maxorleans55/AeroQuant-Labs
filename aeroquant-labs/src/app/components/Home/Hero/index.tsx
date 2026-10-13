@@ -30,7 +30,7 @@ const Hero = () => {
               </p>
             </div>
             <h1>We build software that solves real problems.</h1>
-            <Link href={'#'}>
+            <Link href={'/contact'}>
               <button className='bg-primary text-white text-xl font-semibold py-5 px-12 rounded-full hover:bg-darkmode hover:cursor-pointer mt-10'>
                 Get started
               </button>

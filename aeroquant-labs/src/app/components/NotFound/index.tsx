@@ -11,12 +11,10 @@ const NotFound = () => {
             <div className="relative mx-auto aspect-129/138 max-w-[357px] text-center">
               <Image
                 src="/images/404.svg"
-                alt="image"
-                width={0}
-                height={0}
-                layout="responsive"
-                quality={100}
-                className="mx-auto max-w-full"
+                alt="Illustration for the 404 page"
+                width={199}
+                height={286}
+                className="mx-auto max-w-full h-auto"
               />
             </div>
           </div>

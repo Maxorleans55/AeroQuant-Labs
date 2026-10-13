@@ -26,7 +26,7 @@ const Beliefs = () => {
             </p>
             <div className='text-center sm:text-start'>
               <Link
-                href='#'
+                href='/contact'
                 className='text-xl py-5 px-14 mt-5 font-semibold text-white rounded-full duration-300 bg-primary border border-primary hover:bg-darkmode hover:border-darkmode'>
                 Get Started
               </Link>
@@ -50,7 +50,7 @@ const Beliefs = () => {
               </p>
               <div className='text-center sm:text-start'>
                 <Link
-                  href='#'
+                  href='/#FAQ'
                   className='text-xl py-5 px-14 mt-5 font-semibold text-white rounded-full bg-primary border border-primary hover:bg-darkmode hover:border-darkmode'>
                   Learn more
                 </Link>

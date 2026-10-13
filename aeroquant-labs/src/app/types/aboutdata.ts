@@ -3,4 +3,5 @@ export type aboutdata = {
   imgSrc: string
   paragraph: string
   link: string
+  href: string
 }
