@@ -1,7 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import { Icon } from '@iconify/react/dist/iconify.js'
-import CommercialVideo from '@/app/components/Common/CommercialVideo'
 import { contactmethod } from '@/app/types/contact'
 
 const inputCls =
@@ -140,19 +139,6 @@ const Contact = () => {
           className='w-full h-[380px] lg:h-[480px] border-0 block'
           loading='lazy'
         />
-      </section>
-
-      {/* SEE WHAT WE DO */}
-      <section className='bg-black text-white py-20 lg:py-28'>
-        <div className='container mx-auto max-w-7xl px-4'>
-          <h2 data-aos='fade-up'>See what we do.</h2>
-          <p className='text-white/50 mt-6 max-w-2xl' data-aos='fade-up'>
-            A ten-second tour of the work we love doing.
-          </p>
-          <div className='mt-14' data-aos='fade-up'>
-            <CommercialVideo />
-          </div>
-        </div>
       </section>
 
       {/* LET'S CONNECT */}
