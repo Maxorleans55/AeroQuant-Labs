@@ -4,7 +4,6 @@ import { HeaderItem } from '@/app/types/menu'
 import { aboutdata } from '@/app/types/aboutdata'
 import { workdata } from '@/app/types/workdata'
 import { featureddata } from '@/app/types/featureddata'
-import { articles } from '@/app/types/articles'
 import { footerlinks } from '@/app/types/footerlinks'
 import { engagement } from '@/app/types/engagement'
 import { contactmethod } from '@/app/types/contact'
@@ -149,58 +148,6 @@ const WhyWorkData: whywork[] = [
   },
 ]
 
-// artical data
-const ArticlesData: articles[] = [
-  {
-    time: '5 min',
-    heading: 'Start with the problem,',
-    heading2: 'not the technology.',
-    name: 'AeroQuant Labs',
-    date: 'march 4, 2026',
-    imgSrc: '/images/articles/article.png',
-  },
-  {
-    time: '6 min',
-    heading: 'What we learned building',
-    heading2: 'for slow networks.',
-    name: 'AeroQuant Labs',
-    date: 'february 18, 2026',
-    imgSrc: '/images/articles/article2.png',
-  },
-  {
-    time: '4 min',
-    heading: 'Shipping weekly:',
-    heading2: 'how we keep momentum.',
-    name: 'AeroQuant Labs',
-    date: 'january 27, 2026',
-    imgSrc: '/images/articles/article3.png',
-  },
-  {
-    time: '7 min',
-    heading: 'Designing tools people',
-    heading2: 'actually keep using.',
-    name: 'AeroQuant Labs',
-    date: 'december 12, 2025',
-    imgSrc: '/images/articles/article.png',
-  },
-  {
-    time: '5 min',
-    heading: 'Why we write tests',
-    heading2: 'before we write features.',
-    name: 'AeroQuant Labs',
-    date: 'november 6, 2025',
-    imgSrc: '/images/articles/article2.png',
-  },
-  {
-    time: '6 min',
-    heading: 'From student projects',
-    heading2: 'to products in the wild.',
-    name: 'AeroQuant Labs',
-    date: 'october 15, 2025',
-    imgSrc: '/images/articles/article3.png',
-  },
-]
-
 // footer links data
 const FooterLinksData: footerlinks[] = [
   {
@@ -294,7 +241,6 @@ export const GET = () => {
     FeaturedData,
     EngagementData,
     WhyWorkData,
-    ArticlesData,
     FooterLinksData,
     ContactMethodsData,
     InquiryTypes,

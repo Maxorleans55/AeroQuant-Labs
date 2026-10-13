@@ -10,7 +10,7 @@ import Featured from '@/app/components/Home/Featured'
 import Manage from '@/app/components/Home/Manage'
 import FAQ from '@/app/components/Home/FAQ'
 import WhyWork from '@/app/components/Home/WhyWork'
-import Articles from '@/app/components/Home/Articles'
+import TechNews from '@/app/components/Home/TechNews'
 import Join from '@/app/components/Home/Joinus'
 import Insta from '@/app/components/Home/Insta'
 
@@ -28,7 +28,7 @@ export default function Home() {
       <Manage />
       <FAQ />
       <WhyWork />
-      <Articles />
+      <TechNews />
       <Join />
       <Insta />
     </main>
