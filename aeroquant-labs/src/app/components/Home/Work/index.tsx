@@ -108,15 +108,22 @@ const Work = () => {
                           .slice(0, 2)}
                       </div>
                     )}
-                    <div className='absolute right-16 bottom-0 bg-white shadow-linckedin p-5 rounded-full'>
-                      <Image
-                        src={'/images/wework/linkedin.svg'}
-                        alt='greenbg'
-                        width={30}
-                        height={30}
-                        className='inline-block'
-                      />
-                    </div>
+                    {items.linkedin ? (
+                      <a
+                        href={items.linkedin}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        aria-label={`${items.name} on LinkedIn`}
+                        className='absolute right-16 bottom-0 bg-white shadow-linckedin p-5 rounded-full'>
+                        <Image
+                          src={'/images/wework/linkedin.svg'}
+                          alt=''
+                          width={30}
+                          height={30}
+                          className='inline-block'
+                        />
+                      </a>
+                    ) : null}
                   </div>
                   <h6 className='text-xl text-black dark:text-white font-bold pt-14'>
                     {items.name}
