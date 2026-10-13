@@ -1,26 +1,19 @@
 import React from 'react'
 
-/* The commercial is shot vertically (720x1280), so it plays inside a 16:9
-   band with a blurred full-bleed copy behind it — landscape framing with
-   nothing cropped and no player controls. */
+/* The commercial is delivered as a native 16:9 landscape file
+   (aeroquant-commercial-landscape.mp4), produced from the 720x1280 source
+   with FFmpeg: the portrait content is scaled to full height and the sides
+   are filled with a darkened, blurred copy of the content. Nothing is
+   cropped, and it plays edge-to-edge at full quality with no CSS blur
+   layer needed. */
 const CommercialVideo = () => {
   return (
     <div className='relative z-1 w-full aspect-video rounded-3xl overflow-hidden bg-black'>
       <video
-        src='/videos/aeroquant-commercial.mp4'
-        className='absolute inset-0 h-full w-full object-cover blur-2xl scale-110 brightness-75'
-        autoPlay
-        muted
-        loop
-        playsInline
-        aria-hidden='true'
-        tabIndex={-1}
-      />
-      <video
-        src='/videos/aeroquant-commercial.mp4'
+        src='/videos/aeroquant-commercial-landscape.mp4'
         poster='/videos/poster.jpg'
         aria-label='The AeroQuant Labs commercial'
-        className='absolute inset-0 h-full w-full object-contain'
+        className='h-full w-full object-cover'
         autoPlay
         muted
         loop
