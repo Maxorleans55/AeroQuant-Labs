@@ -13,6 +13,7 @@ import { whywork } from '@/app/types/whywork'
 const headerData: HeaderItem[] = [
   { label: 'About Us', href: '/#About' },
   { label: 'Team', href: '/#Team' },
+  { label: 'Tools', href: '/tools' },
   { label: 'FAQ', href: '/#FAQ' },
   { label: 'News', href: '/#News' },
 ]
