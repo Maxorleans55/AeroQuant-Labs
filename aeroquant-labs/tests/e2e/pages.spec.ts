@@ -25,6 +25,16 @@ test.describe('Pages & cross-navigation', () => {
     await expect(page.getByText('12 October 2026')).toBeVisible()
   })
 
+  test('tools page renders with real content', async ({ page }) => {
+    await page.goto('/tools')
+    await expect(
+      page.getByRole('heading', { level: 1, name: /Tools/ })
+    ).toBeVisible()
+    await expect(page.getByText(/solve real problems/)).toBeVisible()
+    // In-page CTA (last /contact link; the header button is first).
+    await expect(page.locator('a[href="/contact"]').last()).toBeVisible()
+  })
+
   test('footer legal links navigate between pages and home', async ({
     page,
   }) => {

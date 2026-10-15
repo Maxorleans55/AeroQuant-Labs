@@ -64,6 +64,16 @@ const footer = () => {
                   />
                 </Link>
               </div>
+              <div className='footer-icons'>
+                <Link href='https://whatsapp.com/channel/0029VbEEybm9Gv7VzgvwOg0Y'>
+                  <Image
+                    src={'/images/footer/whatsapp.svg'}
+                    alt='whatsapp'
+                    width={25}
+                    height={25}
+                  />
+                </Link>
+              </div>
             </div>
           </div>
           {/* CLOUMN-2/3 */}
