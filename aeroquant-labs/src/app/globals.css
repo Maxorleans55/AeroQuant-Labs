@@ -251,3 +251,13 @@ body,
 .overflow-scroll {
   -webkit-overflow-scrolling: touch;
 }
+
+/* 4) Team carousel hand-scrolling (react-slick `draggable`): advertise
+      the drag surface with a grab cursor on the drag list. */
+#Team .slick-list {
+  cursor: grab;
+}
+
+#Team .slick-list.dragging {
+  cursor: grabbing;
+}
