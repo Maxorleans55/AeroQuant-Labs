@@ -76,6 +76,7 @@ const WorkData: workdata[] = [
   {
     profession: 'Full Stack Developer',
     name: 'Joel Annorh',
+    imgSrc: '/images/wework/joel.jpg',
     linkedin: 'https://www.linkedin.com/in/joel-annorh-7b441a357',
   },
 ]
