@@ -14,6 +14,11 @@ const settings = {
   slidesToScroll: 1,
   arrows: false,
   autoplay: true,
+  draggable: true,
+  // The 4s autoplay transition would otherwise swallow drags (swipeMove
+  // early-returns while animating when this is true) — hand-scrolling
+  // must stay responsive at every moment.
+  waitForAnimate: false,
   speed: 4000,
   autoplaySpeed: 2000,
   cssEase: 'linear',

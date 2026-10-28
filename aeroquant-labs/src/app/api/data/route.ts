@@ -52,6 +52,7 @@ const WorkData: workdata[] = [
     profession: 'Frontend Developer & Digital Forensics',
     name: 'Maxwell Otsiwa Agyakwa',
     imgSrc: '/images/wework/maxwell.jpg',
+    linkedin: 'https://www.linkedin.com/in/maxwell-agyakwa-otsiwa-01643a3b2',
   },
   {
     profession: 'Co-founder',
@@ -71,6 +72,11 @@ const WorkData: workdata[] = [
   {
     profession: 'UI/UX Designer & Backend Developer',
     name: 'Benedicta Stoff Boadi',
+  },
+  {
+    profession: 'Full Stack Developer',
+    name: 'Joel Annorh',
+    linkedin: 'https://www.linkedin.com/in/joel-annorh-7b441a357',
   },
 ]
 
