@@ -261,3 +261,14 @@ body,
 #Team .slick-list.dragging {
   cursor: grabbing;
 }
+
+@keyframes livePulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2.8);
+    opacity: 0;
+  }
+}
