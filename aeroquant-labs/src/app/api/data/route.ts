@@ -79,6 +79,11 @@ const WorkData: workdata[] = [
     imgSrc: '/images/wework/joel.jpg',
     linkedin: 'https://www.linkedin.com/in/joel-annorh-7b441a357',
   },
+  {
+    profession: '',
+    name: 'Nana Obeng',
+    imgSrc: '/images/wework/nana.jpg',
+  },
 ]
 
 // featured data
