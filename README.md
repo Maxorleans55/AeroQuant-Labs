@@ -29,29 +29,37 @@ that help solve problems in society.
 design and ship web apps, internal tools, cloud infrastructure and automation
 for people and organisations solving real problems.
 
-This repository holds the **company website** — a single-page product tour
-with a dedicated contact page, built to introduce the team and make it easy
-to start a conversation.
+This repository holds the **company website** — a product tour with
+dedicated tools, contact, privacy and terms pages, built to introduce
+the team and make it easy to start a conversation.
 
 ## ✨ What's on the site
 
 | Section | What you'll find |
 | --- | --- |
 | **Hero & About** | Who we are and what we build |
+| **Team** | Seven members — photos or styled initials, LinkedIn badges, a hand-scrollable carousel |
 | **Verticals** | The problems and industries we work in |
 | **Ways to work with us** | Discovery Sprint · Product Build · Ongoing Partner |
 | **Showreel** | The commercial in a landscape band, no player chrome |
 | **FAQ & Blog** | Straight answers and engineering notes |
+| **[Tools](aeroquant-labs/src/app/tools/page.tsx)** | What we're building — tools listed here as they ship |
 | **[Contact page](aeroquant-labs/src/app/contact)** | Accra map, contact methods and a *Let's Connect* form |
 
 ## 👥 The Team
 
-Three co-founders, one standard: build things that are useful, accessible
+Seven members, one standard: build things that are useful, accessible
 and built to last.
 
-| Maxwell Otsiwa Agyakwa | Bright Otsiwa Agyei | Elorm Kuami Loh |
-| :---: | :---: | :---: |
-| Co-founder | Co-founder | Co-founder |
+| Name | Role | LinkedIn |
+| --- | --- | --- |
+| Maxwell Otsiwa Agyakwa | Frontend Developer & Digital Forensics | [Profile](https://www.linkedin.com/in/maxwell-agyakwa-otsiwa-01643a3b2) |
+| Bright Otsiwa Agyei | Co-founder | — |
+| Elorm Kuami Loh | Frontend Developer | [Profile](https://www.linkedin.com/in/elormloh) |
+| Solomon Agyabeng Jr | Frontend Developer | — |
+| Benedicta Stoff Boadi | UI/UX Designer & Backend Developer | — |
+| Joel Annorh | Full Stack Developer | [Profile](https://www.linkedin.com/in/joel-annorh-7b441a357) |
+| Nana Obeng |  | — |
 
 ## 🛠 Tech Stack
 
@@ -69,7 +77,7 @@ and built to last.
 Requires **Node.js 18.18+**.
 
 ```bash
-git clone https://github.com/Maxorleans55/AeroQuant-Labs.git
+git clone https://github.com/AeroQuant-Labs/AeroQuant-Labs.git
 cd AeroQuant-Labs/aeroquant-labs
 npm install
 npm run dev
@@ -99,10 +107,11 @@ npm run test:report # open the HTML report from the last run
 The suite covers the contact and Join us forms (validation → mailto
 handoff → confirmation), nav anchors, the FAQ accordion, the one-shot hero
 assembly (paints, then must go static), both commercial videos, the live
-news feed, privacy/terms pages, the branded 404, API payloads (including
-the curated footer), and a clean console/network pass. GitHub Actions runs
-the same suite on every push and pull request to `main`
-(`.github/workflows/e2e.yml`).
+news feed, the privacy, terms and tools pages, the branded 404, footer
+cross-navigation, API payloads (including the curated footer), and a clean
+console/network pass. GitHub Actions runs the same suite on every push and
+pull request to `main` (`.github/workflows/e2e.yml`), and every push to
+`main` also deploys the production site on Vercel.
 
 ## 📁 Project Structure
 
@@ -114,10 +123,11 @@ AeroQuant-Labs/
 │   ├── tests/e2e/            # Playwright end-to-end tests
 │   └── src/
 │       ├── app/
-│       │   ├── page.tsx      # Home — the single-page product tour
+│       │   ├── page.tsx      # Home — the product tour
 │       │   ├── contact/      # Contact page
 │       │   ├── privacy/      # Privacy policy page
 │       │   ├── terms/        # Terms & conditions page
+│       │   ├── tools/        # Tools page
 │       │   ├── api/          # Route handlers (all site content)
 │       │   ├── components/   # React components
 │       │   └── types/        # TypeScript types
@@ -131,6 +141,7 @@ added alongside it later.
 ## 📬 Contact
 
 - ✉️ **Email** — [AeroQuantLabs55@gmail.com](mailto:AeroQuantLabs55@gmail.com)
+- 💬 **WhatsApp channel** — [AeroQuant Labs on WhatsApp](https://whatsapp.com/channel/0029VbEEybm9Gv7VzgvwOg0Y)
 - 📍 **Location** — Accra, Ghana · remote-first, meetings by appointment
 - ⏱ **Response** — we reply to every message within two business days
 
