@@ -8,7 +8,7 @@ test.describe('Pages & cross-navigation', () => {
     ).toBeVisible()
     await expect(page.getByText('12 October 2026')).toBeVisible()
     await expect(
-      page.locator('a[href="mailto:AeroQuantLabs55@gmail.com"]').first()
+      page.locator('a[href="mailto:AeroQuantLabs55@gmail.com"]:visible').first()
     ).toBeVisible()
     // Site chrome wraps the standalone page (logo in header and footer).
     await expect(

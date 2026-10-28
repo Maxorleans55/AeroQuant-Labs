@@ -35,7 +35,7 @@ test.describe('Contact page', () => {
 
     // Direct email handoff link and the OpenStreetMap embed.
     await expect(
-      page.locator('a[href="mailto:AeroQuantLabs55@gmail.com"]').first()
+      page.locator('a[href="mailto:AeroQuantLabs55@gmail.com"]:visible').first()
     ).toBeVisible()
     await expect(page.locator('iframe[src*="openstreetmap"]')).toHaveCount(1)
   })
