@@ -48,32 +48,41 @@ const Aboutus = () => {
                   <AboutSkeleton key={index} />
                 ))
               : about.map((item, i) => (
+                  // Outer element carries the AOS scroll-in entrance (staggered);
+                  // the inner card owns hover motion — AOS sets `transform: none`
+                  // on the animated node, which would otherwise beat Tailwind
+                  // hover lifts.
                   <div
                     key={i}
-                    className='hover:bg-darkmode bg-white rounded-3xl p-8 shadow-xl group'>
-                    <h5 className='group-hover:text-white mb-5'>
-                      {item.heading}
-                    </h5>
-                    <Image
-                      src={item.imgSrc}
-                      alt={item.imgSrc}
-                      width={100}
-                      height={100}
-                      className='mb-5'
-                    />
-                    <p className='text-lg font-normal text-black group-hover:text-white mb-5'>
-                      {item.paragraph}
-                    </p>
-                    <Link
-                      href={item.href}
-                      className='text-18 font-semibold text-primary hover-underline flex items-center'>
-                      {item.link}
-                      <Icon
-                        icon='tabler:chevron-right'
-                        width='20'
-                        height='20'
+                    className='h-full'
+                    data-aos='fade-up'
+                    data-aos-delay={String(i * 120)}>
+                    <div className='group h-full rounded-3xl bg-white p-8 shadow-xl transition-all duration-300 ease-out hover:-translate-y-2 hover:bg-darkmode hover:shadow-[0_24px_50px_-20px_rgba(0,34,74,0.45)]'>
+                      <h5 className='mb-5 transition-colors duration-300 group-hover:text-white'>
+                        {item.heading}
+                      </h5>
+                      <Image
+                        src={item.imgSrc}
+                        alt={item.imgSrc}
+                        width={100}
+                        height={100}
+                        className='mb-5 transition-transform duration-300 ease-out group-hover:scale-110'
                       />
-                    </Link>
+                      <p className='text-lg font-normal text-black transition-colors duration-300 group-hover:text-white mb-5'>
+                        {item.paragraph}
+                      </p>
+                      <Link
+                        href={item.href}
+                        className='text-18 font-semibold text-primary hover-underline flex items-center'>
+                        {item.link}
+                        <Icon
+                          icon='tabler:chevron-right'
+                          width='20'
+                          height='20'
+                          className='transition-transform duration-300 ease-out group-hover:translate-x-1'
+                        />
+                      </Link>
+                    </div>
                   </div>
                 ))}
           </div>

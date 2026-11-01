@@ -202,6 +202,27 @@ html {
   }
 }
 
+/* About cards ("Know more about us"): same rise + settle entrance as the
+   why-section cards, scoped so only #About [data-aos] is affected. */
+@media (prefers-reduced-motion: no-preference) {
+  #About [data-aos='fade-up'] {
+    transform: translate3d(0, 60px, 0) scale(0.96);
+  }
+  #About [data-aos='fade-up'].aos-animate {
+    transform: none;
+  }
+}
+
+/* Reduced motion: show the About cards immediately with no entrance. */
+@media (prefers-reduced-motion: reduce) {
+  #About [data-aos='fade-up'],
+  #About [data-aos='fade-up'].aos-animate {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
 /* ── Interaction performance layer ──────────────────────────────
    Behavior-only polish: timing curves, compositor hints, and
    touch physics. No visual values (colors, spacing, layout,
