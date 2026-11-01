@@ -17,7 +17,7 @@ const Insta = () => {
           />
 
           {/* Sliding Overlay */}
-          <Link href='https://instagram.com' target='_blank'>
+          <Link href='https://www.instagram.com/aeroquantlabs_55' target='_blank'>
             <div className='absolute inset-0 bg-black/60 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out rounded-3xl flex items-center justify-center'>
               <Image
                 src='/images/insta/instagram.svg'
@@ -41,7 +41,7 @@ const Insta = () => {
           />
 
           {/* Sliding Overlay */}
-          <Link href='https://instagram.com' target='_blank'>
+          <Link href='https://www.instagram.com/aeroquantlabs_55' target='_blank'>
             <div className='absolute inset-0 bg-black/60 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out rounded-3xl flex items-center justify-center'>
               <Image
                 src='/images/insta/instagram.svg'
@@ -64,7 +64,7 @@ const Insta = () => {
             className='w-full'
           />
           {/* Sliding Overlay */}
-          <Link href='https://instagram.com' target='_blank'>
+          <Link href='https://www.instagram.com/aeroquantlabs_55' target='_blank'>
             <div className='absolute inset-0 bg-black/60 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out rounded-3xl flex items-center justify-center'>
               <Image
                 src='/images/insta/instagram.svg'
@@ -87,7 +87,7 @@ const Insta = () => {
             className='w-full'
           />
           {/* Sliding Overlay */}
-          <Link href='https://instagram.com' target='_blank'>
+          <Link href='https://www.instagram.com/aeroquantlabs_55' target='_blank'>
             <div className='absolute inset-0 bg-black/60 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out rounded-3xl flex items-center justify-center'>
               <Image
                 src='/images/insta/instagram.svg'

@@ -55,7 +55,7 @@ const footer = () => {
                 </Link>
               </div>
               <div className='footer-icons'>
-                <Link href='https://instagram.com'>
+                <Link href='https://www.instagram.com/aeroquantlabs_55'>
                   <Image
                     src={'/images/footer/instagram.svg'}
                     alt='instagram'
