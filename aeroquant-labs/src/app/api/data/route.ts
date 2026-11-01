@@ -80,7 +80,7 @@ const WorkData: workdata[] = [
     linkedin: 'https://www.linkedin.com/in/joel-annorh-7b441a357',
   },
   {
-    profession: '',
+    profession: 'Full Stack Developer',
     name: 'Nana Obeng',
     imgSrc: '/images/wework/nana.jpg',
   },
