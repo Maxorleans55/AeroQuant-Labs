@@ -23,12 +23,19 @@ const Header: React.FC = () => {
   const [sticky, setSticky] = useState(false)
 
   const menuRef = useRef<HTMLDivElement>(null)
+  const toggleRef = useRef<HTMLButtonElement>(null)
 
   const handleScroll = () => {
     setSticky(window.scrollY >= 80)
   }
 
   const handleClickOutside = (event: MouseEvent) => {
+    // The toggle owns its own open/close. Excluding it here prevents a
+    // double-fire: mousedown would close the menu, then the button's click
+    // handler reads the fresh (closed) state and re-opens it.
+    if (toggleRef.current && toggleRef.current.contains(event.target as Node)) {
+      return
+    }
     if (
       menuRef.current &&
       !menuRef.current.contains(event.target as Node) &&
@@ -80,31 +87,29 @@ const Header: React.FC = () => {
 
   return (
     <>
-      {/* Pill header */}
+      {/* Top bar */}
       <header
-        className='pointer-events-none fixed top-0 z-[55] w-full px-3 [-webkit-tap-highlight-color:transparent]'
-        style={{ paddingTop: 'calc(env(safe-area-inset-top, 0px) + 0.625rem)' }}>
-        <div
-          className={`mx-auto pointer-events-auto flex h-14 max-w-[75rem] items-center justify-between gap-2 rounded-full border border-primary/10 px-1.5 backdrop-blur-md transition-shadow duration-300 ${
-            sticky
-              ? 'bg-white/95 shadow-[0_10px_30px_rgba(0,34,74,0.14)]'
-              : 'bg-white/90 shadow-[0_4px_18px_rgba(0,34,74,0.07)]'
-          }`}>
-          {/* Brand */}
+        className={`fixed top-0 z-[55] w-full border-b border-black/10 bg-white transition-shadow duration-300 ${
+          sticky
+            ? 'shadow-[0_10px_30px_rgba(0,34,74,0.12)]'
+            : 'shadow-[0_2px_12px_rgba(0,34,74,0.06)]'
+        }`}>
+        <div className='container mx-auto flex max-w-[80rem] items-center justify-between gap-4 px-4'>
+          {/* Brand + availability */}
           <Link
             href='/'
             aria-label='AeroQuant Labs — home'
-            className='flex min-w-0 items-center gap-2.5 rounded-full pl-1'>
+            className='flex min-w-0 items-center gap-3 py-3'>
             <Image
               src='/images/logo/aeroquant-labs.jpg'
               alt='AeroQuant Labs logo'
-              width={40}
-              height={40}
+              width={44}
+              height={44}
               priority
-              className='rounded-full object-cover shadow-[0_0_0_2px_#fff,0_0_0_3px_rgba(0,102,255,0.18)]'
+              className='h-11 w-11 flex-none rounded-full object-cover shadow-[0_0_0_2px_#fff,0_0_0_3px_rgba(0,102,255,0.18)]'
             />
             <span className='flex min-w-0 flex-col leading-tight'>
-              <span className='whitespace-nowrap text-[17px] font-extrabold tracking-tight'>
+              <span className='whitespace-nowrap text-xl font-semibold tracking-tight'>
                 Aero<span className='text-primary'>Quant</span> Labs
               </span>
               <span className='flex items-center gap-1.5 whitespace-nowrap text-[11px] font-semibold text-black/55'>
@@ -116,9 +121,9 @@ const Header: React.FC = () => {
             </span>
           </Link>
 
-          {/* Desktop links */}
+          {/* Center nav (desktop) */}
           <nav
-            className='hidden items-center gap-7 lg:flex'
+            className='hidden items-center gap-8 lg:flex'
             aria-label='Primary'>
             {headerData.map((item) => (
               <Link
@@ -130,11 +135,11 @@ const Header: React.FC = () => {
             ))}
           </nav>
 
-          {/* Contact pill + hamburger */}
-          <div className='flex items-center gap-2'>
+          {/* Contact pill + menu toggle */}
+          <div className='flex items-center gap-3'>
             <Link
               href='/contact'
-              className='hidden items-center gap-2 rounded-full bg-primary py-1.5 pl-4 pr-1.5 text-sm font-bold text-white shadow-[0_6px_16px_rgba(0,102,255,0.25)] transition-colors hover:bg-darkmode sm:flex'>
+              className='hidden items-center gap-2 rounded-full bg-primary py-1.5 pl-4 pr-1.5 text-sm font-bold text-white shadow-[0_6px_16px_rgba(0,102,255,0.25)] transition-colors hover:bg-darkmode lg:flex'>
               Contact
               <span className='flex h-7 w-7 items-center justify-center rounded-full bg-white text-primary'>
                 <ArrowRight className='h-3.5 w-3.5' />
@@ -142,6 +147,7 @@ const Header: React.FC = () => {
             </Link>
             <button
               type='button'
+              ref={toggleRef}
               onClick={() => setNavbarOpen(!navbarOpen)}
               className={`relative flex h-11 w-11 flex-none items-center justify-center rounded-full border transition-colors ${
                 navbarOpen
@@ -163,7 +169,7 @@ const Header: React.FC = () => {
                     ? 'top-1/2 -mt-px -rotate-45 bg-white'
                     : 'top-[calc(50%+2px)] bg-darkmode'
                 }`}></span>
-              </button>
+            </button>
           </div>
         </div>
       </header>
