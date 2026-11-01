@@ -30,7 +30,7 @@ const members: Spotlight[] = [
   },
   {
     name: 'Nana Obeng',
-    role: '',
+    role: 'Full Stack Developer',
     quote: 'Every strong team keeps growing.',
     story:
       'Nana has joined the build at AeroQuant Labs. His story on the team is only beginning — watch this space.',
