@@ -84,6 +84,11 @@ const WorkData: workdata[] = [
     name: 'Nana Obeng',
     imgSrc: '/images/wework/nana.jpg',
   },
+  {
+    profession: 'Frontend Developer',
+    name: 'Bernice Dwamena',
+    imgSrc: '/images/wework/bernice.jpg',
+  },
 ]
 
 // featured data

@@ -36,6 +36,14 @@ const members: Spotlight[] = [
       'Nana has joined the build at AeroQuant Labs. His story on the team is only beginning — watch this space.',
     photo: '/images/dedicated/nana.jpg',
   },
+  {
+    name: 'Bernice Dwamena',
+    role: 'Frontend Developer',
+    quote: 'Good design earns trust before a word is read.',
+    story:
+      'Bernice has joined the build at AeroQuant Labs as a Frontend Developer. She turns ideas into interfaces that feel fast, clear, and effortless — and she is only getting started.',
+    photo: '/images/dedicated/bernice.jpg',
+  },
 ]
 
 const Dedicated = () => {
