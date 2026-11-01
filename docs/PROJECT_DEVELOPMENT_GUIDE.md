@@ -46,8 +46,8 @@ required content, a completion checklist and an AI-integrity note.
    only in chat, email or a personal drive is not submitted.
 
 4. **Every stated deadline is final.** Unless a project plan says otherwise, the internal freeze is
-   **17:00 (Accra, GMT)** on the stated day. Work lands as a merged PR before the freeze — "it was
-   pushed at 16:59" does not apply if the PR is still open.
+   **11:59 pm (Accra, GMT)** on the stated day. Work lands as a merged PR before the freeze — "it was
+   pushed at 23:58" does not apply if the PR is still open.
 
 5. **Reports are Markdown in the repository.** When a client-facing or executive copy is required,
    export a PDF and attach it to the corresponding GitHub Release or share it with the client.
@@ -211,34 +211,14 @@ records the new date and the reason in the project minutes **before** the origin
 
 ---
 
-## 7. Deliverable Weights
-
-Each deliverable carries a relative weight (total 100). Weights are used for **planning and review
-attention** — which deliverables are cheapest to redo if done poorly, and where the bulk of a
-project's engineering value sits. They are not grades.
-
-| Deliverable | Weight |
-| --- | --- |
-| D0 Team Charter, Client Intake, Repo Setup and AI Contract | 5 |
-| D1 Project Proposal, Feasibility and Business Considerations | 8 |
-| D2 Software Requirements Specification | 12 |
-| D3 Product Backlog, UX Prototype and Sprint 1 Plan | 10 |
-| D4 Architecture, CI/CD Baseline and Mid-Project Architecture Review | 12 |
-| D5 Sprint 1 Review Report and Prototype v0.1 | 7 |
-| D6 Sprint 2 Review Report, Test Plan and Quality Evidence | 7 |
-| D7 Sprint 3 Review Report, Security/Privacy/AI Audit and Observability Evidence | 7 |
-| D8 Sprint 4 Review Report, Release Candidate and User Manual Draft | 8 |
-| D9 Final Demo, User Manual, Deployment/Ops Guide and Client Handoff Pack | 14 |
-| D10 Repository Freeze, Post-Mortem, Member Evidence Pack | 10 |
-| **Total** | **100** |
-
----
-
-## 8. Deliverables
+## 7. Deliverables
 
 Unless stated otherwise, every deliverable lands as a **merged PR into its `docs/NN_.../` folder**
 before the deadline; a client-facing PDF export (where required) is attached to the matching GitHub
 Release or shared with the client by the Product / Client Manager.
+On team product projects (Appendix G), any item under a deliverable's *Required content and
+structure* that presupposes a client is satisfied by its Appendix G equivalent: record the
+substitution in the deliverable instead of leaving the item blank.
 
 ---
 
@@ -247,7 +227,6 @@ Release or shared with the client by the Product / Client Manager.
 | Item | Instruction |
 | --- | --- |
 | Due | Week 1 (project day 0) — date set at kickoff |
-| Weight | 5/100 |
 | Lands in | `docs/00_team_charter/` (report + sources + evidence). `README.md`, `TEAM.md` and `AI_USAGE.md` must exist at repo root. |
 
 **Purpose**
@@ -319,7 +298,6 @@ starts.
 | Item | Instruction |
 | --- | --- |
 | Due | Week 2 |
-| Weight | 8/100 |
 | Lands in | `docs/01_proposal/` (report + source + client evidence + diagrams). Update `README.md` with the project summary and client-facing problem statement. |
 
 **Purpose**
@@ -390,7 +368,6 @@ risks, the business/legal context and the delivery plan.
 | Item | Instruction |
 | --- | --- |
 | Due | Week 3 |
-| Weight | 12/100 |
 | Lands in | `docs/02_requirements/` (report + editable source + diagrams + client validation evidence). Convert validated stories into GitHub Issues after submission. |
 
 **Purpose**
@@ -455,7 +432,6 @@ from a vague client need to precise, testable, traceable requirements and user s
 | Item | Instruction |
 | --- | --- |
 | Due | Week 4 |
-| Weight | 10/100 |
 | Lands in | `docs/03_backlog_ux/`. Every story must exist as a GitHub Issue or linked project-board item. |
 
 **Purpose**
@@ -516,7 +492,6 @@ accelerates the wrong solution.
 | Item | Instruction |
 | --- | --- |
 | Due | Week 5 |
-| Weight | 12/100 |
 | Lands in | `docs/04_architecture_ci/` + `presentations/mid_project_architecture_review/` (report, PPTX + PDF deck). Create release tag `v0.0-baseline`. |
 
 **Purpose**
@@ -585,7 +560,6 @@ review evidence.
 | Item | Instruction |
 | --- | --- |
 | Due | Week 6 |
-| Weight | 7/100 |
 | Lands in | `docs/05_sprint_1/`. Create release tag `v0.1-prototype` with release notes. |
 
 **Purpose**
@@ -607,7 +581,9 @@ mockup alone is not enough unless the project is explicitly design-tool focused 
 - **D. Metrics and reflection** — story points planned vs completed; velocity; burndown or
   progress chart; lessons learned and next-sprint changes; contribution summary by member.
 - **E. Client feedback** — evidence of client/user review, message, meeting or demo; what was
-  accepted, rejected or changed; new questions for the next client meeting.
+  accepted, rejected or changed; new questions for the next client meeting. *Team product
+  project (Appendix G): the end users are the client — record their feedback gathered via
+  WhatsApp, Google Forms / Jotform or phone calls, plus Product Owner review.*
 - **F. Minimum prototype expectations**
   - At least one core user flow partially works end-to-end or through a clearly explained mocked dependency.
   - Basic project setup, linting and tests run through CI.
@@ -635,7 +611,6 @@ mockup alone is not enough unless the project is explicitly design-tool focused 
 | Item | Instruction |
 | --- | --- |
 | Due | Week 7 |
-| Weight | 7/100 |
 | Lands in | `docs/06_sprint_2_quality/` + `tests/`. Create release tag `v0.2-beta`. |
 
 **Purpose**
@@ -684,7 +659,6 @@ engineering process.
 | Item | Instruction |
 | --- | --- |
 | Due | Week 8 |
-| Weight | 7/100 |
 | Lands in | `docs/07_sprint_3_security_observability/`. `AI_USAGE.md` must be updated. Create release tag `v0.3-staging`. |
 
 **Purpose**
@@ -738,7 +712,6 @@ release-candidate stage.
 | Item | Instruction |
 | --- | --- |
 | Due | Week 9 |
-| Weight | 8/100 |
 | Lands in | `docs/08_sprint_4_release_candidate/` + draft manuals. Create release tag `v0.9-rc`. |
 
 **Purpose**
@@ -792,7 +765,6 @@ ready before the final demo week.
 | Item | Instruction |
 | --- | --- |
 | Due | Week 10 |
-| Weight | 14/100 |
 | Lands in | `docs/09_final_demo_handoff/`, `presentations/final_demo/`, `videos/youtube_links.md`. Final deck as PPTX + PDF, manuals as PDF exports shared with the client. Create release tag `v1.0-demo`. |
 
 **Purpose**
@@ -867,7 +839,6 @@ been delivered.
 | Item | Instruction |
 | --- | --- |
 | Due | Closure week — project end |
-| Weight | 10/100 |
 | Lands in | `docs/10_postmortem_final_freeze/`. Create release tag `v1.0-handoff` before the deadline. |
 
 **Purpose**
@@ -1048,7 +1019,11 @@ build:   # create production build where applicable
 
 Some projects are built by the team directly **for end users** — public tools, internal systems,
 open products — with no sponsoring client. These projects follow this guide exactly, with one
-substitution: wherever the guide says *client*, apply the rules below.
+substitution: wherever the guide says *client*, **the end users are the client**. The client is
+not a single entity but the collective user base: all client-side information and evidence is
+taken from real users directly, through **WhatsApp chats, Google Forms / Jotform surveys, or
+phone calls**, and recorded as dated evidence files in `docs/` (affirmed under *Affirmation*
+below).
 
 - **The team is never its own user.** Dogfooding is welcome for development, but it does not
   count as validation. Evidence must come from people outside the team who match the target
@@ -1057,21 +1032,51 @@ substitution: wherever the guide says *client*, apply the rules below.
   scope, prioritizes the backlog and signs off launch — playing every client role across
   D0–D10. Where practical, the Product Owner should not be the implementer of the work being
   accepted.
-- **User evidence replaces client evidence.** Interviews, surveys, analytics, usability sessions
-  and beta feedback are recorded as dated evidence files in `docs/`, exactly like client
-  meeting minutes.
+- **The user base is the client — evidence comes from many users, not one client entity.**
+  Interviews, surveys, analytics, usability sessions and beta feedback are collected from real
+  end users **via WhatsApp chats, Google Forms / Jotform surveys, or phone calls**, and filed as
+  dated evidence files in `docs/`, exactly like client meeting minutes: who was reached, when,
+  through which channel, and what they said.
 
 | Client-based wording in this guide | Team product project equivalent |
 | --- | --- |
-| D0 — client intake and first-contact evidence | Problem statement backed by user research: target-audience interviews, market/competitor notes, analytics from similar tools |
+| D0 — client intake and first-contact evidence | Problem statement backed by user research: target-audience interviews, market/competitor notes (users reached via WhatsApp, Google Forms / Jotform or phone), analytics from similar tools |
 | D1 — client intent evidence and three-year relevance | Product hypothesis, target users, success metrics (KPIs) and why the product stays useful beyond the engagement |
 | D2 — client validation of the requirements baseline | User validation: at least two or three sessions with target users per major flow; open-questions log |
 | D3 — backlog reflects client priorities; user reviews UX direction | Product Owner prioritization against KPIs; usability test of the prototype with at least one target user |
-| D5–D8 — "Client feedback" in every sprint review | "User feedback" section: test sessions, beta cohort responses, analytics — what was accepted, rejected or changed |
+| D5–D8 — "Client feedback" in every sprint review | "User feedback" section: test sessions, beta cohort responses and analytics gathered via WhatsApp, Google Forms / Jotform or phone calls — what was accepted, rejected or changed |
 | D8 — client acceptance testing plan | Beta / early-access plan naming non-team testers |
 | D9 — client handoff pack and acceptance | Launch sign-off by the Product Owner, runbook, and named ongoing ownership (who monitors and supports the product) |
 | D10 — client acceptance evidence | Launch review: KPI vs hypothesis, user-feedback summary, and a go / iterate / retire decision |
 | Appendix E — client acceptance form | Product acceptance sign-off: same fields, with the Product Owner as signatory and "features accepted" as launch scope |
 
-Everything else — roles, repository structure, deliverables, weights, timeline, AI-integrity rules
+**Affirmation: items that cannot be met literally on team product projects.**
+
+Some entries under each deliverable's *Required content and structure* are written from the
+client's side of the engagement: signed client approvals, client meeting minutes, client
+feedback records, client acceptance forms. On a team product project **those items cannot be
+submitted — and their absence is not a defect.** Reviewers must judge them as follows:
+
+- **There is no single client entity — so a meeting with "the client" is never expected.**
+  Every requirement that presumes talking to *the client* is fulfilled from the users
+  themselves: information and evidence are gathered directly from end users **via WhatsApp
+  chats, Google Forms / Jotform surveys, or phone calls**, and their replies and submissions
+  are filed in `docs/` as the record — who was reached, when, through which channel, what was
+  decided. Never invent one authoritative client person or entity, and never fabricate a single
+  client's minutes or sign-off (Appendix F). Product Owner reviews complement, but do not
+  replace, user voices.
+- The item is **fully met** when the equivalent from the table above is present and dated in
+  `docs/`. No apology, permission or special note is required; write "per Appendix G" beside
+  the entry.
+- Where no equivalent exists, write an explicit line in the deliverable:
+  `N/A - team product project (Appendix G): <why it does not apply> - <substitute evidence,
+  or "none applies" with reasoning>`. An explicit N/A with reasoning is complete evidence;
+  a silently blank item is not.
+- **Never fabricate client evidence.** Invented client names, fake meeting minutes or mocked
+  sign-offs are dishonest project work (Appendix F) regardless of intent.
+- Deadlines, review cadence, quality bars and the meaning of every other requirement stay
+  identical. Only the *source* of evidence changes: from the client to real end users and the
+  Product Owner.
+
+Everything else — roles, repository structure, deliverables, timeline, AI-integrity rules
 and Appendices A–F — applies unchanged.
